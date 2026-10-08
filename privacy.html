@@ -78,7 +78,7 @@
 
     <section>
       <h2>2. Information Processed on Your Device</h2>
-      <p>The Service processes the following data only on your device:</p>
+      <p>Atmosfix stores and processes information on your device. The Apple-service requests and optional iCloud storage described below are exceptions to device-only processing:</p>
       <ul>
         <li>Location data: Used to fetch local atmospheric pressure information if you grant permission.</li>
         <li>User content: Logs, notes, and preferences you enter in the app.</li>
@@ -92,7 +92,8 @@
       <ul>
         <li>WeatherKit and MapKit: Location data is sent to Apple services to return pressure and place results.</li>
         <li>StoreKit: Subscription status is handled by Apple. We do not receive your payment details.</li>
-        <li>iCloud (optional): If you enable iCloud Sync, your data is stored in your iCloud account and governed by Apple's policies.</li>
+        <li>iCloud: Check-in sync is on by default when iCloud is available. Synced check-ins, including the notes and weather context you save with them, are stored in your private iCloud database under Apple's policies. You can turn sync off in Atmosfix Settings. Saved places and alert preferences remain on each device.</li>
+        <li>HealthKit: Sleep, mindful-session and step reads are optional and requested separately. Atmosfix does not copy raw Health samples. If you enable a Health context type, bounded, derived 24-hour summaries can be saved with check-ins in a protected, backup-excluded file on that device. Those summaries do not enter the check-in iCloud database. Older check-ins can receive a derived summary from available Health history; its read time is shown.</li>
       </ul>
     </section>
 
@@ -109,14 +110,15 @@
       <h2>5. Data Storage</h2>
       <ul>
         <li>Your data is stored locally on your device.</li>
-        <li>If you enable iCloud Sync, your data is stored in your iCloud account.</li>
-        <li>Certain shared settings may be stored in an app group to support widgets and Apple Watch sync.</li>
+        <li>Check-in iCloud sync defaults on when available and can be turned off in Settings. Turning it off does not delete existing iCloud copies. Local records remain available when the app falls back to device storage.</li>
+        <li>Saved places, pressure caches and alert preferences use an app group for native widgets and the Apple Watch companion. Health-derived context is not sent to widgets or Apple Watch.</li>
+        <li>Ask Atmosfix handles questions on device using local rules and, where supported and available, Apple's on-device language model. Saved derived Health context is included in an answer only after a separate opt-in. It is not supplied to the language model.</li>
       </ul>
     </section>
 
     <section>
       <h2>6. Sharing</h2>
-      <p>We do not sell your personal data. Data is only shared with Apple services required to operate the app (WeatherKit, MapKit, StoreKit, iCloud).</p>
+      <p>We do not sell your personal data. Atmosfix uses the Apple services described above to operate the app. If you choose to export or share a file, the recipient and destination you select can receive its contents, including any derived Health context included in that export.</p>
     </section>
 
     <section>
@@ -124,7 +126,8 @@
       <ul>
         <li>You can disable location access in system settings.</li>
         <li>You can enable or disable iCloud Sync in Settings.</li>
-        <li>You can delete your data from within the app.</li>
+        <li>You can edit, delete or export check-ins from within the app. An export can include derived Health context available on that device; review the file before sharing it. iCloud changes require connectivity and can take time to reach another device.</li>
+        <li>You can revoke Health read access in system Settings and disable optional Health context types and Ask's separate Health opt-in in Atmosfix.</li>
         <li>You can manage notification preferences in the app.</li>
       </ul>
     </section>
